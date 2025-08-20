@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Awinash | AWS Cloud Engineer</title>
+  <meta name="description" content="AWS Cloud Engineer specializing in cloud infrastructure, serverless, and CI/CD automation. Hire me on Upwork or Fiverr." />
+  <meta name="theme-color" content="#0f172a" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Awinash | AWS Cloud Engineer" />
+  <meta property="og:description" content="Cloud infrastructure, serverless apps, and DevOps automation on AWS." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="headshot.jpg" />
+  <style>
+    :root{
+      --bg:#0b1020; /* page background */
+      --panel:#0f172a; /* card background */
+      --muted:#94a3b8; /* secondary text */
+      --text:#e2e8f0; /* main text */
+      --brand:#22d3ee; /* accent */
+      --brand-2:#60a5fa; /* secondary accent */
+      --ring: 0 0 0 3px rgba(34,211,238,.35);
+      --radius:18px;
+      --shadow: 0 10px 25px rgba(0,0,0,.25);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;height:100%;scroll-behavior:smooth}
+    body{font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; background:linear-gradient(180deg, #0b1020, #0b1020 40%, #0c1226 100%); color:var(--text)}
+    img{max-width:100%; display:block}
+    a{color:inherit; text-decoration:none}
+    .container{max-width:1100px; margin-inline:auto; padding:24px}
+    header{position:sticky; top:0; z-index:10; backdrop-filter: blur(6px); background: rgba(11,16,32,.55); border-bottom:1px solid rgba(255,255,255,.06)}
+    nav{display:flex; align-items:center; justify-content:space-between; gap:16px}
+    .logo{display:flex; align-items:center; gap:10px; font-weight:700}
+    .logo .dot{width:10px; height:10px; background:linear-gradient(135deg,var(--brand),var(--brand-2)); border-radius:999px; box-shadow:0 0 0 4px rgba(34,211,238,.15)}
+    .nav-links{display:flex; gap:18px; align-items:center}
+    .nav-links a{opacity:.85}
+    .cta{display:inline-flex; align-items:center; gap:10px; background:linear-gradient(135deg,var(--brand),var(--brand-2)); padding:10px 16px; border-radius:14px; color:#0b1020; font-weight:700; box-shadow:var(--shadow)}
+
+    /* Hero */
+    .hero{display:grid; grid-template-columns: 1.2fr .8fr; gap:28px; align-items:center; padding-block:48px}
+    .hero-card{background:linear-gradient(180deg,#0f172a,rgba(15,23,42,.75)); border:1px solid rgba(255,255,255,.06); border-radius:var(--radius); padding:28px; box-shadow:var(--shadow)}
+    .kicker{font-size:14px; letter-spacing:.12em; text-transform:uppercase; color:var(--brand)}
+    h1{font-size:clamp(28px, 5vw, 44px); line-height:1.1; margin:10px 0 12px}
+    .sub{color:var(--muted); font-size:clamp(14px,2.1vw,18px)}
+    .hero-ctas{display:flex; flex-wrap:wrap; gap:12px; margin-top:18px}
+    .btn{display:inline-flex; align-items:center; gap:10px; padding:12px 16px; border:1px solid rgba(255,255,255,.1); border-radius:12px; transition:.2s; background:rgba(255,255,255,.02)}
+    .btn:hover{transform:translateY(-2px); box-shadow:var(--shadow)}
+    .btn.primary{background:linear-gradient(135deg,var(--brand),var(--brand-2)); color:#0b1020; border-color:transparent; font-weight:700}
+    .stats{display:grid; grid-template-columns: repeat(3,1fr); gap:14px; margin-top:20px}
+    .stat{background:rgba(255,255,255,.03); border:1px solid rgba(255,255,255,.06); padding:14px; border-radius:12px; text-align:center}
+    .stat .n{font-size:22px; font-weight:800}
+    .stat .l{font-size:12px; color:var(--muted)}
+
+    .headshot{aspect-ratio:1/1; border-radius:22px; overflow:hidden; border:1px solid rgba(255,255,255,.08); background:radial-gradient(120px at 80% 20%, rgba(96,165,250,.15), transparent 50%), radial-gradient(120px at 20% 80%, rgba(34,211,238,.15), transparent 50%)}
+    .headshot img{width:100%; height:100%; object-fit:cover}
+
+    /* Sections */
+    section{padding-block:36px}
+    .section-title{display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:18px}
+    .section-title h2{margin:0; font-size:clamp(22px, 3.8vw, 30px)}
+    .grid{display:grid; gap:16px}
+
+    /* Services */
+    .services{grid-template-columns: repeat(3, 1fr)}
+    .card{background:linear-gradient(180deg,#0f172a,rgba(15,23,42,.8)); border:1px solid rgba(255,255,255,.07); border-radius:16px; padding:18px; box-shadow:var(--shadow)}
+    .card h3{margin:.2rem 0 .6rem}
+    .pill{display:inline-block; font-size:12px; color:#0b1020; background:linear-gradient(135deg,var(--brand),var(--brand-2)); padding:6px 10px; border-radius:999px; font-weight:700}
+
+    /* Projects */
+    .projects{grid-template-columns: repeat(3,1fr)}
+    .project .thumb{aspect-ratio: 16/10; border-radius:12px; overflow:hidden; border:1px solid rgba(255,255,255,.08); background:rgba(255,255,255,.02)}
+    .project h4{margin:.6rem 0 .2rem}
+    .project p{margin:.2rem 0 .6rem; color:var(--muted)}
+
+    /* Skills */
+    .skills{display:flex; flex-wrap:wrap; gap:10px}
+    .tag{border:1px solid rgba(255,255,255,.1); padding:8px 10px; border-radius:999px; font-size:13px; background:rgba(255,255,255,.02)}
+
+    /* Testimonials */
+    .testimonials{grid-template-columns: repeat(3,1fr)}
+    blockquote{margin:0; padding:0}
+    .quote{position:relative; padding:18px; border-radius:16px; border:1px solid rgba(255,255,255,.07); background:linear-gradient(180deg,#0f172a,rgba(15,23,42,.8))}
+    .quote:before{content:"\201C"; position:absolute; font-size:50px; left:12px; top:-8px; opacity:.2}
+    .quote footer{margin-top:12px; color:var(--muted); font-size:13px}
+
+    /* Contact */
+    form{display:grid; gap:12px}
+    input, textarea{background:rgba(255,255,255,.02); border:1px solid rgba(255,255,255,.12); color:var(--text); padding:12px 14px; border-radius:12px; outline:none}
+    input:focus, textarea:focus{box-shadow:var(--ring); border-color:transparent}
+    textarea{min-height:130px; resize:vertical}
+    .footer{padding:22px; text-align:center; color:var(--muted)}
+
+    /* Responsive */
+    @media (max-width: 960px){
+      .hero{grid-template-columns: 1fr}
+      .services{grid-template-columns: 1fr 1fr}
+      .projects{grid-template-columns: 1fr 1fr}
+      .testimonials{grid-template-columns: 1fr 1fr}
+    }
+    @media (max-width: 640px){
+      .services,.projects,.testimonials{grid-template-columns: 1fr}
+      .nav-links{display:none}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo"><span class="dot"></span> <span>Awinash – AWS Cloud Engineer</span></div>
+        <div class="nav-links">
+          <a href="#services">Services</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+          <a class="cta" href="https://www.upwork.com/" target="_blank" rel="noopener">Hire on Upwork</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- HERO -->
+    <section class="hero" id="hero">
+      <div class="hero-card">
+        <div class="kicker">AWS • DevOps • Serverless</div>
+        <h1>Cloud infrastructure, automation, and secure deployments on AWS.</h1>
+        <p class="sub">I design, deploy, and manage scalable workloads using EC2, S3, Lambda, VPC, Terraform, Docker, Kubernetes, and CI/CD pipelines. Available for short-term gigs and long-term engagements.</p>
+        <div class="hero-ctas">
+          <a class="btn primary" href="https://www.upwork.com/" target="_blank" rel="noopener">Hire on Upwork</a>
+          <a class="btn" href="https://www.fiverr.com/" target="_blank" rel="noopener">Hire on Fiverr</a>
+          <a class="btn" href="#projects">See Projects</a>
+        </div>
+        <div class="stats">
+          <div class="stat"><div class="n">10+ </div><div class="l">Core AWS Services</div></div>
+          <div class="stat"><div class="n">5 </div><div class="l">Portfolio Projects</div></div>
+          <div class="stat"><div class="n">24/7 </div><div class="l">Support Window</div></div>
+        </div>
+      </div>
+      <div class="headshot">
+        <!-- Replace headshot.jpg with your photo file name -->
+        <img src="headshot.jpg" alt="Awinash headshot" />
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services">
+      <div class="section-title">
+        <h2>Services</h2>
+        <span class="pill">Start in 48h</span>
+      </div>
+      <div class="grid services">
+        <div class="card">
+          <h3>AWS Infrastructure Setup</h3>
+          <p class="sub">VPC, subnets, EC2, RDS, Route53, CloudFront with security best practices (IAM, SGs, backups).</p>
+        </div>
+        <div class="card">
+          <h3>Serverless Backends</h3>
+          <p class="sub">API Gateway + Lambda + DynamoDB + S3 + SES with event-driven workflows and monitoring.</p>
+        </div>
+        <div class="card">
+          <h3>DevOps & CI/CD</h3>
+          <p class="sub">GitHub Actions / CodePipeline to EC2/ECS/EKS, Dockerization, zero-downtime deployments and rollback.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <div class="section-title">
+        <h2>Projects</h2>
+        <a class="btn" href="https://github.com/" target="_blank" rel="noopener">View GitHub</a>
+      </div>
+      <div class="grid projects">
+        <article class="card project">
+          <div class="thumb"><img src="img/s3-cloudfront.png" alt="S3 + CloudFront" /></div>
+          <h4>Static Website on S3 + CloudFront + Route53</h4>
+          <p>Secure, global static hosting with HTTPS and caching. Bucket policies and least-privilege IAM.</p>
+          <a class="btn" href="#" target="_blank">Repo</a>
+        </article>
+        <article class="card project">
+          <div class="thumb"><img src="img/serverless-form.png" alt="Serverless Contact Form" /></div>
+          <h4>Serverless Contact Form (Lambda + API GW + DynamoDB)</h4>
+          <p>Event-driven backend with SES notifications and CloudWatch logging.</p>
+          <a class="btn" href="#" target="_blank">Repo</a>
+        </article>
+        <article class="card project">
+          <div class="thumb"><img src="img/cicd-ec2.png" alt="CI/CD to EC2" /></div>
+          <h4>CI/CD Pipeline to EC2 (GitHub Actions)</h4>
+          <p>Automated test, build, deploy with Nginx reverse proxy and rolling updates.</p>
+          <a class="btn" href="#" target="_blank">Repo</a>
+        </article>
+        <article class="card project">
+          <div class="thumb"><img src="img/terraform.png" alt="Terraform IaC" /></div>
+          <h4>Infrastructure as Code with Terraform</h4>
+          <p>Reusable modules for VPC, EC2, RDS. Remote state in S3 with locking.</p>
+          <a class="btn" href="#" target="_blank">Repo</a>
+        </article>
+        <article class="card project">
+          <div class="thumb"><img src="img/vpc.png" alt="Secure VPC" /></div>
+          <h4>Secure VPC with Bastion & Private Subnets</h4>
+          <p>Public/private subnets, NAT gateway, SSH via bastion, NACLs & SGs hardening.</p>
+          <a class="btn" href="#" target="_blank">Repo</a>
+        </article>
+        <article class="card project">
+          <div class="thumb"><img src="img/eks-ecs.png" alt="Containers" /></div>
+          <h4>Containerized Deployments (ECS/EKS)</h4>
+          <p>Blue/green deployments with health checks, autoscaling and metrics.</p>
+          <a class="btn" href="#" target="_blank">Repo</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section>
+      <div class="section-title"><h2>Skills</h2></div>
+      <div class="skills">
+        <span class="tag">AWS</span><span class="tag">EC2</span><span class="tag">S3</span><span class="tag">Lambda</span><span class="tag">API Gateway</span><span class="tag">CloudFront</span>
+        <span class="tag">VPC</span><span class="tag">RDS</span><span class="tag">Route53</span><span class="tag">CloudWatch</span>
+        <span class="tag">Terraform</span><span class="tag">Docker</span><span class="tag">Kubernetes</span><span class="tag">GitHub Actions</span><span class="tag">Jenkins</span>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section>
+      <div class="section-title"><h2>Testimonials</h2></div>
+      <div class="grid testimonials">
+        <div class="quote"><blockquote>Delivered a secure, scalable AWS setup on time. Clear documentation and great communication.</blockquote><footer>— Client Name</footer></div>
+        <div class="quote"><blockquote>Our CI/CD pipeline is now fully automated. Deployment time went from hours to minutes.</blockquote><footer>— Client Name</footer></div>
+        <div class="quote"><blockquote>Excellent serverless implementation with Lambda and DynamoDB. Highly recommended.</blockquote><footer>— Client Name</footer></div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="section-title"><h2>Contact</h2></div>
+      <!-- Replace action with Formspree or your backend endpoint -->
+      <form action="https://formspree.io/f/your-id" method="POST">
+        <input name="name" placeholder="Your name" required />
+        <input type="email" name="email" placeholder="Email address" required />
+        <textarea name="message" placeholder="Tell me about your project…" required></textarea>
+        <button class="btn primary" type="submit">Send Message</button>
+      </form>
+      <p class="sub" style="margin-top:10px">Prefer platforms? <a href="https://www.upwork.com/" target="_blank" rel="noopener">Upwork</a> • <a href="https://www.fiverr.com/" target="_blank" rel="noopener">Fiverr</a></p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    © <span id="y"></span> Awinash • AWS Cloud Engineer • <a href="#hero">Back to top</a>
+  </footer>
+
+  <script>
+    // dynamic year
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
